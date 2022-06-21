@@ -3,7 +3,11 @@
 @section('title', 'Listagens de usuarios')
 
 @section('content')
-<h1>Listagem dos usuarios</h1>
+<h1>Listagem dos usuarios
+
+   <a href="{{ route('users.create') }} ">(+)</a>
+
+</h1>
 <ul>
 @foreach ($users as $user)
  <li>

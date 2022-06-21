@@ -27,4 +27,31 @@ class UserController extends Controller
          return view('users.show', compact('user'));
 
     }
+
+    public function create()
+    {
+        return view('users.create');
+    }
+
+    public function grava(Request $Req)
+    {
+        //Criptografando a senha
+        $data = $Req->all();
+        $data['password'] = bcrypt($Req->password);
+        //gravando o usuario
+        $user = User::create($data);
+        //retornando para o formulario inicial
+        return redirect()->route('users.index');
+        //retornando para o formulario de cadastro
+        //return redirect()->route('users.show', $user->id);
+
+
+        // Não estamos criptografando a senha
+         //$user = new User;
+         //$user->name = $Req->name;
+         //$user->email = $Req->email;
+         //$user->password = $Req->password;
+         //$user->save();
+
+    }
 }
