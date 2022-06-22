@@ -13,6 +13,7 @@
  <li>
     {{ $user-> name}} -
     {{ $user-> email}}
+    | <a href="{{ route('users.editar',  $user->id) }}"> Editar. </a>
     | <a href="{{ route('users.show',  $user->id) }}"> Detahes do Usuario. </a>
  </li>
 @endforeach

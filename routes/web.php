@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
+Route::get('/users/{id}/editar', [UserController::class, 'editar'])->name('users.editar');
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::get('/users/create',[UserController::class, 'create'])->name('users.create');
 Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');

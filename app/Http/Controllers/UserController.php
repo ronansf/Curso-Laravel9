@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\GravaAlteraUsuarioFormRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
@@ -33,7 +35,7 @@ class UserController extends Controller
         return view('users.create');
     }
 
-    public function grava(Request $Req)
+    public function grava(GravaAlteraUsuarioFormRequest $Req)
     {
         //Criptografando a senha
         $data = $Req->all();
@@ -53,5 +55,24 @@ class UserController extends Controller
          //$user->password = $Req->password;
          //$user->save();
 
+    }
+    public function editar($id)
+    {
+        if (!$user = User::find($id))
+           return redirect()->route('users.index');
+
+        return view('users.editar', compact('user'));
+    }
+    public function update(Request $req, $id)
+    {
+        if (!$user = User::find($id))
+           return redirect()->route('users.index');
+
+           $data = $req->only('name','email');
+           if ($req->password)
+                $data['password'] = bcrypt($req->password);
+            $user->update($data);
+
+            return Redirect()->route('users.index');
     }
 }
