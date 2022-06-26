@@ -9,13 +9,17 @@ use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
-    //Dentro desta vc implementa os seus codigos
-    public function index()
+    //Criar um construtor
+    protected $model;
+    public function __Construct(User $user)
     {
-        $users = User::get();
-        //dd($users);
+        $this->model = $user;
+    }
+    //Dentro desta vc implementa os seus codigos
+    public function index(Request $req)
+    {        
+        $users = $this->model->getUsers(search: $req->search ?? '');
         return view('users.index', compact('users'));
-
     }
 
     public function show($id)
@@ -23,7 +27,7 @@ class UserController extends Controller
         //Sempre colocar os mesmos nomes do metodo com a view;
         //return view('users.show');
         //$user = User::where('id', $id)->first();
-        if (!$user = User::find($id))
+        if (!$user = $this->model->find($id))
            return redirect()->route('users.index');
            //dd($user);
          return view('users.show', compact('user'));
@@ -58,14 +62,14 @@ class UserController extends Controller
     }
     public function editar($id)
     {
-        if (!$user = User::find($id))
+        if (!$user = $this->model->find($id))
            return redirect()->route('users.index');
 
         return view('users.editar', compact('user'));
     }
-    public function update(Request $req, $id)
+    public function update(GravaAlteraUsuarioFormRequest $req, $id)
     {
-        if (!$user = User::find($id))
+        if (!$user = $this->model->find($id))
            return redirect()->route('users.index');
 
            $data = $req->only('name','email');
