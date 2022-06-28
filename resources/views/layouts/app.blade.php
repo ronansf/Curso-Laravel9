@@ -7,23 +7,28 @@
         <title>
                 @yield('title') - Facilta Acertos na Loteria
         </title>
-        <div id='logo' style ='text-align:center'>
-            <img src= 'arquivos/logo.jpg'>
+
+        <link rel="shortcut icon" href="{{ url('images/favicon.ico')}}" type="image/png">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <div class="container mx-auto">
+           <center><img src= "{{ url('images/logo.jpg') }}" type="image/jpg" align="middle"></center>
         </div>
         <hr>
 
 
     </head>
-    <body>
+    <body class="bg-gray-50">
 
-        <div class="app">
+        <div class="container mx-auto px-4 py-8">
             @yield('content')
         </div>
 
     </body>
     <hr><br>
-    <div id='logo-rodape' style ='text-align:center'>
-                <img src= 'arquivos/logoverde.jpg'>
+    <div class="container mx-auto  px-8 py-8">
+        <center> <img src= "{{ url('images/logoverde.jpg') }}" type="image/jpg" > </center>
     </div>
     <div id='corp' style ='text-align:center'>
         <p> © Copyright 2022 - A Facilita Acertos na Loteria  </p>
