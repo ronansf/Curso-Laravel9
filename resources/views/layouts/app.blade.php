@@ -4,23 +4,18 @@
         <meta charset="UTP-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        
         <title>
                 @yield('title') - Facilta Acertos na Loteria
         </title>
 
         <link rel="shortcut icon" href="{{ url('images/favicon.ico')}}" type="image/png">
 
-        <script src="https://cdn.tailwindcss.com"></script>
-
-        <div class="container mx-auto">
-           <center><img src= "{{ url('images/logo.jpg') }}" type="image/jpg" align="middle"></center>
-        </div>
-        <hr>
-
-
     </head>
     <body class="bg-gray-50">
-
+        
         <div class="container mx-auto px-4 py-8">
             @yield('content')
         </div>

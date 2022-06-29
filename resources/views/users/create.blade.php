@@ -1,6 +1,9 @@
 @extends('layouts.app')
-
 @section('title', 'Novo Usuario')
+
+@extends('layouts.menu')
+@section('menu')
+
 
 @section('content')
 <h1>Novo Usuario</h1>

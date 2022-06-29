@@ -1,6 +1,8 @@
 @extends('layouts.app')
-
 @section('title', 'Listagem do usuario')
+
+@extends('layouts.menu')
+@section('menu')
 
 @section('content')
 
