@@ -20,8 +20,8 @@
                 <!-- Primeiro Menu -->
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
-                    <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Serviços</a>
-                    <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Sobre Nós</a>
+                    <a href="{{ route('users.create') }} " class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Cadastrar</a>
+                    <a href="{{ route('users.editar', 1)}}" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Editar1</a>
                     <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contato</a>
                 </div>
             </div>

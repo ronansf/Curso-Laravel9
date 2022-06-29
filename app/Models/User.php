@@ -49,10 +49,20 @@ class User extends Authenticatable
            {
                $query->where('email', $search);
                $query->orWhere('name', 'LIKE', "%{$search}%");
-           }    
+           }
        })->get();
        return $user;
 
     }
+    //Relacionamentos
+    public function Comments()
+    {
+        //como usamos nomes padrões os demais parametros são defaults
+        return $this->hasMany(Comment::class);
+        //caso contrario
+        //return $this->hasMany(Comment::class,'user_id','id');
 
+
+    }
 }
+
