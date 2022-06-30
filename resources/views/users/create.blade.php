@@ -6,7 +6,7 @@
 
 
 @section('content')
-<h1>Novo Usuario</h1>
+<h1 class="text-2x1 font-semibold leading-tigh py2">Novo Usuario</h1>
 
 @include('includes/validation-form')
 

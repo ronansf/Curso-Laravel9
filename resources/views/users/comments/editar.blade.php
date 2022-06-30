@@ -1,18 +1,18 @@
 @extends('layouts.app')
-@section('title', "Editar Usuario {$user->name}")
+@section('title', "Editar Comentários do Usuario {$user->name}")
 
 @extends('layouts.menu')
 @section('menu')
 
 
 @section('content')
-<h1 calss="text-2x1 font-semibold leading-tigh py-2">Editar Usuario {{ $user->name}}</h1>
+<h1 class="text-2x1 font-semibold leading-tigh py-2">Editar Comentários do Usuário {{ $user->name}}</h1>
 
 @include('includes/validation-form')
 
 <form action="{{ route('users.update', $user->id)}}" method="post">
     @method('PUT')
-    @include('users._partials.form')
+    @include('users.comments._partials.form')
 </form>
 
 @endsection

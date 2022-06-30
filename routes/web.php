@@ -2,7 +2,8 @@
 
 
 use App\Http\Controllers\{
-    UserController
+    UserController,
+    Admin\CommentController
 };
 
 use Illuminate\Support\Facades\Route;
@@ -17,13 +18,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//rotas dos comentários
+Route::get('/users/{user}/comments/{id}', [CommentController::class, 'edit'])->name('comments.edit');
+Route::get('/users/{id}/comments/edit',   [CommentController::class, 'edit'  ])->name('comments.edit');
+Route::post('/users/{id}/comments',       [CommentController::class, 'store' ])->name('comments.store');
+Route::get('/users/{id}/comments/create', [CommentController::class, 'create'])->name('comments.create');
+Route::get('/users/{id}/comments',        [CommentController::class, 'index' ])->name('comments.index');
 
+//rotas dos usuarios
+Route::delete('users/{id}', [UserController::class, 'destroy]'])->name('users.destroy');
 Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
 Route::get('/users/{id}/editar', [UserController::class, 'editar'])->name('users.editar');
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::get('/users/create',[UserController::class, 'create'])->name('users.create');
-Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
 Route::post('/users', [UserController::class,'grava'])->name('users.grava');
+Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
 
 
 Route::get('/', function () {
