@@ -19,16 +19,22 @@
                 </div>
                 <!-- Primeiro Menu -->
                 <div class="hidden md:flex items-center space-x-1">
-                    <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
-                    <a href="{{ route('users.create') }} " class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Cadastrar</a>
-                    <a href="{{ route('users.editar', 1)}}" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Editar1</a>
-                    <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contato</a>
+                        <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
+                        <a href="{{ route('users.editar', 1)}}" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Desempenho</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Jogos</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Conferência</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Pagamentos</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Dúvidas</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Videos</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contato</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Chat</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Aplicativo</a>
                 </div>
             </div>
             <!-- Segundo Menu -->
             <div class="hidden md:flex items-center space-x-3 ">
-                <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Login</a>
-                <a href="" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Logout</a>
+              <!--  <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Login</a>
+                <a href="" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Logout</a> -->
             </div>
             <!-- Mobile menu button -->
             <div class="md:hidden flex items-center">
