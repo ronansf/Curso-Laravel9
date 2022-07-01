@@ -7,11 +7,11 @@
 @section('content')
    <h1 class="text-2x1 font-semibold leading-tigh py2">
         Comentarios do Usuario {{$user->name}}
-      <a href="{{ route('comments.create', $user->id) }} " class="bg-orange-200 rounded-full text-white px-4 text-sm ">(+)</a>
+      <a href="{{ route('comments.create', $user->id) }} " class="bg-orange-200 rounded-full text-white px-4 text-sm">(+)</a>
    </h1>
-   <form action="{{ route('users.index') }}" method="get" class="py-5">
+   <form action="{{ route('comments.index', $user->id) }}" method="get" class="py-5">
       <input   type='text' name="search" placeholder="Pesquisar">
-      <button  class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow "> Buscar </button>
+      <button  class="shadow bg-green-500 rounded-full hover:bg-purple-400 focus:shadow focus:bg-white focus:border-purple-500 "> Buscar </button>
    </form>
    <table class=" min-w-full leading-normal shadow-md rounded-lg overflow-hj">
         <thead>
@@ -33,7 +33,7 @@
            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> {{ $comment->body}} - </td>
            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> {{ $comment->visible ? "Sim" : "Não"}}  </td>
            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-            <a href="{{ route('comments.edit', [ user => $user->id, id => $comment->id]) }}" class="bg-green-200 rounded-full py-2 px-6"> Editar. </a>
+            <a href="{{ route('comments.edit', [ 'user' => $user->id, 'id' => $comment->id] ) }}" class="bg-green-200 rounded-full py-2 px-6"> Editar. </a>
         </td>
          </tr>
         @endforeach

@@ -12,10 +12,11 @@
     m-0
     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"> {{ $comment->body ?? old('body')}} </textarea>
     <label for="visible">
-        <input type="checkbox" name="visible">
-        @if (isset($comment0 && $comment->visible))
+        <input type="checkbox" name="visible"
+        @if (isset($comment) && $comment->visible)
             checked = "checked"
         @endif
+        >
     </label>
 
     <button type="submit" class="w-full shadow bg-purple-200 outline-none text-white font-bold py-2 py-4">

@@ -10,7 +10,7 @@
 
 @include('includes/validation-form')
 
-<form action="{{ route('users.update', $user->id)}}" method="post">
+<form action="{{ route('comments.update', $comment->id)}}" method="post">
     @method('PUT')
     @include('users.comments._partials.form')
 </form>

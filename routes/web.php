@@ -19,14 +19,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //rotas dos comentários
-Route::get('/users/{user}/comments/{id}', [CommentController::class, 'edit'])->name('comments.edit');
-Route::get('/users/{id}/comments/edit',   [CommentController::class, 'edit'  ])->name('comments.edit');
-Route::post('/users/{id}/comments',       [CommentController::class, 'store' ])->name('comments.store');
 Route::get('/users/{id}/comments/create', [CommentController::class, 'create'])->name('comments.create');
+Route::get('/users/{user}/comments/{id}', [CommentController::class, 'edit'])->name('comments.edit');
+Route::put('/comments/{id}',              [CommentController::class, 'update'])->name('comments.update');
+Route::post('/users/{id}/comments',       [CommentController::class, 'store' ])->name('comments.store');
 Route::get('/users/{id}/comments',        [CommentController::class, 'index' ])->name('comments.index');
 
 //rotas dos usuarios
-Route::delete('users/{id}', [UserController::class, 'destroy]'])->name('users.destroy');
+Route::delete('users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
 Route::get('/users/{id}/editar', [UserController::class, 'editar'])->name('users.editar');
 Route::get('/users', [UserController::class, 'index'])->name('users.index');

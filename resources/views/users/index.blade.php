@@ -6,11 +6,11 @@
 
 @section('content')
    <h1 class="text-2x1 font-semibold leading-tigh py2">Listagem dos usuarios
-      <a href="{{ route('users.create') }} " class="bg-blue-900 rounded-full">(+)</a>
+      <a href="{{ route('users.create') }} " class="bg-orange-200 rounded-full text-white px-4 text-sm">(+)</a>
    </h1>
    <form action="{{ route('users.index') }}" method="get" class="py-5">
       <input   type='text' name="search" placeholder="Pesquisar">
-      <button  class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow"> Buscar </button>
+      <button  class="shadow bg-green-500 rounded-full hover:bg-purple-400 focus:shadow"> Buscar </button>
    </form>
    <table class=" min-w-full leading-normal shadow-md rounded-lg overflow-hj">
         <thead>

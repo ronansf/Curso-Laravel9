@@ -17,7 +17,7 @@ class UserController extends Controller
     }
     //Dentro desta vc implementa os seus codigos
     public function index(Request $req)
-    {        
+    {
         $users = $this->model->getUsers(search: $req->search ?? '');
         return view('users.index', compact('users'));
     }
@@ -77,6 +77,14 @@ class UserController extends Controller
                 $data['password'] = bcrypt($req->password);
             $user->update($data);
 
-            return Redirect()->route('users.index');
+            return redirect()->route('users.index');
     }
+    public function destroy($id)
+    {
+        if (!$user = $this->model->find($id))
+           return redirect()->route('users.index');
+           $user->delete();
+           return redirect()->route('users.index');
+    }
+
 }
