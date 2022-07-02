@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Listagens de usuarios')
 
-@extends('layouts.menu')
+@extends('layouts.menu-facilita')
 @section('menu')
 
 @section('content')
