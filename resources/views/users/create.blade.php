@@ -10,7 +10,7 @@
 
 @include('includes/validation-form')
 
-<form action="{{ route('users.grava') }}" method="post">
+<form action="{{ route('users.grava') }}" method="post" enctype="multipart/form-data">
     @csrf
     @include('users._partials.form')
 </form>

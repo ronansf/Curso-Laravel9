@@ -6,6 +6,7 @@ use App\Http\Requests\GravaAlteraUsuarioFormRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -18,7 +19,9 @@ class UserController extends Controller
     //Dentro desta vc implementa os seus codigos
     public function index(Request $req)
     {
-        $users = $this->model->getUsers(search: $req->search ?? '');
+        $users = $this->model
+                            ->getUsers(
+                                search: $req->search ?? '');
         return view('users.index', compact('users'));
     }
 
@@ -39,11 +42,18 @@ class UserController extends Controller
         return view('users.create');
     }
 
-    public function grava(GravaAlteraUsuarioFormRequest $Req)
+    public function grava(GravaAlteraUsuarioFormRequest $req)
     {
         //Criptografando a senha
-        $data = $Req->all();
-        $data['password'] = bcrypt($Req->password);
+        $data = $req->all();
+        $data['password'] = bcrypt($req->password);
+            if( $req->image)
+            {                
+             $data['image'] = $req->image->store('users');
+             //$ext = $Req->image->getClientOriginalExtension();
+             //$data['image'] = $Req->image->storeAs('users',now() . "." . $ext);
+            }
+        
         //gravando o usuario
         $user = User::create($data);
         //retornando para o formulario inicial
@@ -54,9 +64,9 @@ class UserController extends Controller
 
         // Não estamos criptografando a senha
          //$user = new User;
-         //$user->name = $Req->name;
-         //$user->email = $Req->email;
-         //$user->password = $Req->password;
+         //$user->name = $req->name;
+         //$user->email = $req->email;
+         //$user->password = $req->password;
          //$user->save();
 
     }
@@ -71,12 +81,22 @@ class UserController extends Controller
     {
         if (!$user = $this->model->find($id))
            return redirect()->route('users.index');
-
+          
            $data = $req->only('name','email');
            if ($req->password)
                 $data['password'] = bcrypt($req->password);
+             
+            if( $req->image)
+                { 
+                    if ($user->image && Storage::exists($user->image)) 
+                    {
+                        Storage::delete($user->image);
+                    }                
+                     $data['image'] = $req->image->store('users');
+                }
+            
+            //grava no BD
             $user->update($data);
-
             return redirect()->route('users.index');
     }
     public function destroy($id)
