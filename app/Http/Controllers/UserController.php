@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\GravaAlteraUsuarioFormRequest;
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\GravaAlteraUsuarioFormRequest;
 
 class UserController extends Controller
 {
@@ -16,7 +17,7 @@ class UserController extends Controller
     {
         $this->model = $user;
     }
-    //Dentro desta vc implementa os seus codigos
+    //Dentro desta vc implementa os seus metodos
     public function index(Request $req)
     {
         $users = $this->model
@@ -42,7 +43,7 @@ class UserController extends Controller
         return view('users.create');
     }
 
-    public function grava(GravaAlteraUsuarioFormRequest $req)
+    public function store(GravaAlteraUsuarioFormRequest $req)
     {
         //Criptografando a senha
         $data = $req->all();
@@ -70,12 +71,12 @@ class UserController extends Controller
          //$user->save();
 
     }
-    public function editar($id)
+    public function edit($id)
     {
         if (!$user = $this->model->find($id))
            return redirect()->route('users.index');
 
-        return view('users.editar', compact('user'));
+        return view('users.edit', compact('user'));
     }
     public function update(GravaAlteraUsuarioFormRequest $req, $id)
     {

@@ -14,7 +14,7 @@ class User extends Authenticatable
 
     /**
      * The attributes that are mass assignable.
-     *
+     * Os atributos que podem ser atribuídos em massa.
      * @var array<int, string>
      */
     protected $fillable = [
@@ -26,7 +26,7 @@ class User extends Authenticatable
 
     /**
      * The attributes that should be hidden for serialization.
-     *
+     * Os atributos que devem ser ocultados para serialização.
      * @var array<int, string>
      */
     protected $hidden = [
@@ -36,7 +36,7 @@ class User extends Authenticatable
 
     /**
      * The attributes that should be cast.
-     *
+     * Os atributos que devem ser lançados.
      * @var array<string, string>
      */
     protected $casts = [
@@ -53,7 +53,7 @@ class User extends Authenticatable
            }
        })
        ->with(['Comments'])
-       ->paginate();
+       ->paginate(2);
        return $user;
     }
     //Relacionamentos

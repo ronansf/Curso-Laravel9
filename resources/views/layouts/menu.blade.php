@@ -1,10 +1,4 @@
 @yield('menu')
-<!-- Logo Central -->
-<div class="container mx-auto">
-    <center><img src= "{{ url('images/logo.jpg') }}" type="image/jpg"></center>
-</div>
-<hr>
-
 <!-- Menu Começa aqui -->
 <nav class="bg-white shadow-lg">
     <div class="max-w-6xl mx-auto px-4">
@@ -13,25 +7,24 @@
                 <div>
                     <!-- Logo Lateral esquerdo -->
                     <a href="#" class="flex items-center py-4 px-2">
-                        <img src= "{{ url('images/logoredondo.png') }}" alt="Logo" class="h-8 w-8 mr-2">
-                        <!-- <span class="font-semibold text-gray-500 text-lg">Navegação</span> -->
+                        <img src= "{{ url('images/logoredondo.png') }}" alt="Logo" class="flex h-8 w-8 mr-8">
                     </a>
                 </div>
                 <!-- Primeiro Menu -->
                 <div class="hidden md:flex items-center space-x-1">
-                        <a href="{{ route('users.index')}}" class="py-1 px-3 text-gray-500 font-semibold hover:border-b-2 border-red-500  transition duration-300 shadow">Home</a>
+                        <a href="{{ route('menus.view',7)}}" class="py-1 px-3 text-gray-500 font-semibold hover:border-b-2 border-red-500  transition duration-300 shadow">Home</a>
                         <div id="1" class="relative group">
                              <button class="flex items-center rounded py-2 px-3 bg-white focus:border-blue-500 text-sm text-gray-800 hover:border-b-2 border-red-500 focus:outline-none placeholder-gray-300 font-semibold hover:text-green-500 shadow">
                                 Empresa
                                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>  
                             </button>   
                             <div class="absolute invisible group-hover:visible bg-white border-gray-300 py-1 shadow-md rounded-md">
-                                    <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">QuenSomos</a>
-                                    <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Termo de Aceite</a>
-                                    <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Serviço</a>
-                                    <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Como Funciona</a>
-                                    <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Cadastro</a>
-                                    <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Login/Senha</a>
+                                    <a href="{{ route('menus.view',1)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">QuenSomos</a>
+                                    <a href="{{ route('menus.view',2)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Termo de Aceite</a>
+                                    <a href="{{ route('menus.view',3)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Serviço</a>
+                                    <a href="{{ route('menus.view',4)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Como Funciona</a>
+                                    <a href="{{ route('menus.view',5)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Cadastro</a>
+                                    <a href="{{ route('menus.view',6)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Login/Senha</a>
                            </div>
                         </div>
                         <div id="2"class="relative group">
@@ -40,7 +33,7 @@
                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>  
                        </button>   
                        <div class="absolute invisible group-hover:visible bg-white border-gray-300 py-1 shadow-md rounded-md">
-                               <a href="{{ route('users.editar',1)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Simulação</a>
+                               <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Simulação</a>
                                <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Jogos Jogados e Premiados</a>
                                <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Jogos Não Jogados e Premiados</a>
                         </div>
@@ -63,6 +56,16 @@
                         <a href="#" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Contato</a>
                         <a href="#" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Chat</a>
                         <a href="#" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Aplicativo</a>
+                        <div id="4" class="relative group">
+                            <button class="flex items-center rounded py-2 px-3 bg-white focus:border-blue-500 text-sm text-gray-800 hover:border-b-2 border-red-500 focus:outline-none placeholder-gray-300 font-semibold hover:text-green-500 shadow">
+                               Admin
+                               <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>  
+                            </button>   
+                            <div class="absolute invisible group-hover:visible bg-white border-gray-300 py-1 shadow-md rounded-md">
+                                   <a href="{{ route('menus.index')}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Menus</a>
+                                   <a href="{{ route('users.index')}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Usuários</a>
+                            </div>
+                       </div>
                 </div>
             </div>
             <!-- Segundo Menu -->
