@@ -12,19 +12,19 @@
                 </div>
                 <!-- Primeiro Menu -->
                 <div class="hidden md:flex items-center space-x-1">
-                        <a href="{{ route('menus.view',7)}}" class="py-1 px-3 text-gray-500 font-semibold hover:border-b-2 border-red-500  transition duration-300 shadow">Home</a>
+                        <a href="{{ route('menus.view',1)}}" class="py-1 px-3 text-gray-500 font-semibold hover:border-b-2 border-red-500  transition duration-300 shadow">Home</a>
                         <div id="1" class="relative group">
                              <button class="flex items-center rounded py-2 px-3 bg-white focus:border-blue-500 text-sm text-gray-800 hover:border-b-2 border-red-500 focus:outline-none placeholder-gray-300 font-semibold hover:text-green-500 shadow">
                                 Empresa
                                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>  
                             </button>   
                             <div class="absolute invisible group-hover:visible bg-white border-gray-300 py-1 shadow-md rounded-md">
-                                    <a href="{{ route('menus.view',1)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">QuenSomos</a>
-                                    <a href="{{ route('menus.view',2)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Termo de Aceite</a>
-                                    <a href="{{ route('menus.view',3)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Serviço</a>
-                                    <a href="{{ route('menus.view',4)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Como Funciona</a>
-                                    <a href="{{ route('menus.view',5)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Cadastro</a>
-                                    <a href="{{ route('menus.view',6)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Login/Senha</a>
+                                    <a href="{{route('menus.view',2)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">QuenSomos</a>
+                                    <a href="{{route('menus.view',3)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Termo de Aceite</a>
+                                    <a href="{{route('menus.view',4)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Serviço</a>
+                                    <a href="{{route('menus.view',5)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Como Funciona</a>
+                                    <a href="{{route('menus.view',6)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Cadastro</a>
+                                    <a href="{{route('menus.view',7)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Login/Senha</a>
                            </div>
                         </div>
                         <div id="2"class="relative group">
@@ -33,9 +33,9 @@
                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>  
                        </button>   
                        <div class="absolute invisible group-hover:visible bg-white border-gray-300 py-1 shadow-md rounded-md">
-                               <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Simulação</a>
-                               <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Jogos Jogados e Premiados</a>
-                               <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Jogos Não Jogados e Premiados</a>
+                               <a href="{{route('menus.view',8)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Simulação</a>
+                               <a href="{{route('menus.view',9)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Jogos Jogados e Premiados</a>
+                               <a href="{{route('menus.view',10)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Jogos Não Jogados e Premiados</a>
                         </div>
                    </div>
                         <div id="3"class="relative group">
@@ -44,18 +44,18 @@
                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>  
                            </button>   
                            <div class="absolute invisible group-hover:visible bg-white border-gray-300 py-1 shadow-md rounded-md">
-                                   <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Adquirir Jogos</a>
-                                   <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Jogos Não Jogados</a>
+                                   <a href="{{route('menus.view',11)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Adquirir Jogos</a>
+                                   <a href="{{route('menus.view',12)}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Jogos Não Jogados</a>
                             </div>
                        </div>
                                                 
-                        <a href="#" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Conferência</a>
-                        <a href="#" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Pagamentos</a>
-                        <a href="#" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Dúvidas</a>
-                        <a href="#" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Videos</a>
-                        <a href="#" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Contato</a>
-                        <a href="#" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Chat</a>
-                        <a href="#" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Aplicativo</a>
+                        <a href="{{route('menus.view',13)}}" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Conferência</a>
+                        <a href="{{route('menus.view',14)}}" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Pagamentos</a>
+                        <a href="{{route('menus.view',15)}}" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Dúvidas</a>
+                        <a href="{{route('menus.view',16)}}" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Videos</a>
+                        <a href="{{route('menus.view',17)}}" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Contato</a>
+                        <a href="{{route('menus.view',18)}}" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Chat</a>
+                        <a href="{{route('menus.view',19)}}" class="py-1 px-3 text-gray-500 font-semibold hover:text-green-500 hover:border-b-2 border-red-500 transition duration-300 shadow">Aplicativo</a>
                         <div id="4" class="relative group">
                             <button class="flex items-center rounded py-2 px-3 bg-white focus:border-blue-500 text-sm text-gray-800 hover:border-b-2 border-red-500 focus:outline-none placeholder-gray-300 font-semibold hover:text-green-500 shadow">
                                Admin

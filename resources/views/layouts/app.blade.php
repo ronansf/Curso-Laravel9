@@ -88,9 +88,15 @@
                             </div>
                         </div>
                         <!-- Segundo Menu -->
-                        <div class="hidden md:flex items-center space-x-3 ">
-                          <!--  <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Login</a>
-                            <a href="" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Logout</a> -->
+                        <div class="hidden md:flex items-center">
+                            <form action="{{url('login')}}" type="post">
+                                @csrf
+                                <button type="submit" class="ml-16 py-1 px-1 font-medium rounded text-black bg-green-300 hover:bg-green-400 hover:text-white transition duration-300">Login</button>     
+                             </form>
+                            <form action="{{url('logout')}}" type="post">
+                                @csrf
+                                <button type="submit" class="ml-4 py-1 px-1 font-medium rounded text-black bg-yellow-300 hover:bg-yellow-400 hover:text-white transition duration-300">Logout</button>     
+                             </form>
                         </div>
                     </div>
                 </div>

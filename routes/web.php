@@ -49,3 +49,5 @@ Route::get('/users/{id}',           [UserController::class, 'show'])->name('user
 Route::get('/', function () {
     return view('welcome');
 });
+
+require __DIR__.'/auth.php';
