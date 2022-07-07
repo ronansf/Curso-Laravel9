@@ -1,10 +1,6 @@
 @extends('layouts.app')
 @section('title', "Editar Menu {$menu->nome}")
 
-@extends('layouts.menu')
-@section('menu')
-
-
 @section('content')
 <h1 calss="text-2x1 font-semibold leading-tigh py-2">Editar Menu {{ $menu->nome}}</h1>
 
