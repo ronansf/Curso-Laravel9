@@ -83,6 +83,8 @@
                                         <div class="absolute invisible group-hover:visible bg-white border-gray-300 py-1 shadow-md rounded-md">
                                                <a href="{{ route('menus.index')}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Menus</a>
                                                <a href="{{ route('users.index')}}" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">Usuários</a>
+                                               <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">ImpDados</a>
+                                               <a href="#" class="block text-sm py-1 px-3 text-gray-500 font-semibold bg-white hover:text-blue-800 hover:underline transition duration-300">ExpDados</a>
                                         </div>
                                    </div>
                             </div>
